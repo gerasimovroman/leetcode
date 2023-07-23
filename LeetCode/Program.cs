@@ -23,5 +23,12 @@ var leetCodeStudy = new LeetCodeStudy();
 // ListNodeHelper.WriteLine(leetCodeStudy.MergeTwoLists(new ListNode(1, new ListNode(2, new ListNode(4))),
 //     new ListNode(1, new ListNode(3, new ListNode(4)))));
 // ListNodeHelper.WriteLine(leetCodeStudy.MergeTwoLists(new ListNode(5), new ListNode(1, new ListNode(2, new ListNode(4)))));
-ListNodeHelper.WriteLine(leetCodeStudy.MergeTwoLists(ListNodeHelper.FromArray(new[] { -8, -5, -4, 1, 8, 8 }),
-    ListNodeHelper.FromArray(new[] { -8, -6, 1, 2, 7, 9 })));
+// ListNodeHelper.WriteLine(leetCodeStudy.MergeTwoLists(ListNodeHelper.FromArray(new[] { -8, -5, -4, 1, 8, 8 }),
+//     ListNodeHelper.FromArray(new[] { -8, -6, 1, 2, 7, 9 })));
+
+
+
+Console.WriteLine(leetCodeStudy.SearchInsert(new []{1,3,5,6}, 7));
+Console.WriteLine(leetCodeStudy.SearchInsert(new []{1,3,5,6}, 2));
+Console.WriteLine(leetCodeStudy.SearchInsert(new []{1,3,5,6}, 5));
+Console.WriteLine(leetCodeStudy.SearchInsert(new []{1,3,5,6}, 0));
