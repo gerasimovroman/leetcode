@@ -61,11 +61,39 @@ public class LeetCodeStudy
         {
             if (nums[i] != nums[j])
             {
-                nums[j + 1] = nums[i];
-                j++;
-            }    
+                if (nums[j] == nums[i - 1])
+                {
+                    j++;
+                    nums[j + 1] = nums[i];
+                    j++;
+                }
+                else
+                {
+                    nums[j + 1] = nums[i];
+                    j++;
+                }
+                
+            }
         }
 
         return j + 1;
+    }
+    
+    public bool IsPalindrome(int x)
+    {
+        if (x < 0) return false;
+
+        if (x == 0) return true;
+
+        var r = 0;
+        var i = x;
+
+        while (i != 0)
+        {
+            i = Math.DivRem(i, 10, out var div);
+            r = r * 10 + div;
+        }
+
+        return x - r == 0;
     }
 }
