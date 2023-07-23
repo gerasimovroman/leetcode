@@ -201,7 +201,7 @@ public class LeetCodeStudy
             if (nums[i] > target)
             {
                 var p = i;
-                
+
                 while (p - 1 >= 0 && nums[p - 1] > target)
                 {
                     p--;
@@ -212,5 +212,34 @@ public class LeetCodeStudy
         }
 
         return nums.Length;
+    }
+
+
+    public int LengthOfLastWord(string s)
+    {
+        var startPoint = -1;
+        var length = s.Length;
+
+        for (int i = s.Length - 1; i >= 0; i--)
+        {
+            if (s[i] != ' ' && startPoint == -1)
+            {
+                startPoint = i;
+            }
+
+            if (s[i] == ' ' && startPoint > 0)
+            {
+                length = startPoint - i;
+                break;
+            }
+            
+            if (i == 0 && startPoint >= 0)
+            {
+                length = startPoint + 1;
+                break;
+            }
+        }
+
+        return length;
     }
 }

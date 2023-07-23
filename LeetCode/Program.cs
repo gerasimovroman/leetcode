@@ -28,7 +28,10 @@ var leetCodeStudy = new LeetCodeStudy();
 
 
 
-Console.WriteLine(leetCodeStudy.SearchInsert(new []{1,3,5,6}, 7));
-Console.WriteLine(leetCodeStudy.SearchInsert(new []{1,3,5,6}, 2));
-Console.WriteLine(leetCodeStudy.SearchInsert(new []{1,3,5,6}, 5));
-Console.WriteLine(leetCodeStudy.SearchInsert(new []{1,3,5,6}, 0));
+// Console.WriteLine(leetCodeStudy.SearchInsert(new []{1,3,5,6}, 7));
+// Console.WriteLine(leetCodeStudy.SearchInsert(new []{1,3,5,6}, 2));
+// Console.WriteLine(leetCodeStudy.SearchInsert(new []{1,3,5,6}, 5));
+// Console.WriteLine(leetCodeStudy.SearchInsert(new []{1,3,5,6}, 0));
+
+
+Console.Write(leetCodeStudy.LengthOfLastWord("a "));
