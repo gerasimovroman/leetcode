@@ -214,7 +214,6 @@ public class LeetCodeStudy
         return nums.Length;
     }
 
-
     public int LengthOfLastWord(string s)
     {
         var startPoint = -1;
@@ -241,5 +240,49 @@ public class LeetCodeStudy
         }
 
         return length;
+    }
+    
+    
+    public int[] PlusOne(int[] digits)
+    {
+        digits[^1]++;
+        
+        if (digits[^1] > 9)
+        {
+            var i = digits.Length - 1;
+            
+            while (i > 0)
+            {
+                if (digits[i] == 10)
+                {
+                    digits[i] = 0;
+                    digits[i - 1]++;
+                }
+                
+                i--;
+            }
+
+            if (digits[0] == 10)
+            {
+                Array.Resize(ref digits, digits.Length + 1);
+
+                i = 0;
+                
+                while (i < digits.Length - 1)
+                {
+                    if (digits[i] == 10)
+                    {
+                        digits[i] = 1;
+                    }
+                    else
+                    {
+                        
+                    }
+                    i++;
+                }
+            }
+        }
+
+        return digits;
     }
 }

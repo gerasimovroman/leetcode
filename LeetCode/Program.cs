@@ -27,11 +27,12 @@ var leetCodeStudy = new LeetCodeStudy();
 //     ListNodeHelper.FromArray(new[] { -8, -6, 1, 2, 7, 9 })));
 
 
-
 // Console.WriteLine(leetCodeStudy.SearchInsert(new []{1,3,5,6}, 7));
 // Console.WriteLine(leetCodeStudy.SearchInsert(new []{1,3,5,6}, 2));
 // Console.WriteLine(leetCodeStudy.SearchInsert(new []{1,3,5,6}, 5));
 // Console.WriteLine(leetCodeStudy.SearchInsert(new []{1,3,5,6}, 0));
 
 
-Console.Write(leetCodeStudy.LengthOfLastWord("a "));
+// Console.Write(leetCodeStudy.LengthOfLastWord("a "));
+
+Console.WriteLine(String.Join(" ", leetCodeStudy.PlusOne(new[] { 9,9,9 })));
