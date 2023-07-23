@@ -8,5 +8,8 @@ var leetCodeStudy = new LeetCodeStudy();
 // Console.WriteLine(Math.DivRem(121, 10, out var rem));
 // Console.WriteLine(rem);
 
-Console.WriteLine(leetCodeStudy.IsPalindrome(121));
-Console.WriteLine(leetCodeStudy.IsPalindrome(435345));
+// Console.WriteLine(leetCodeStudy.IsPalindrome(121));
+// Console.WriteLine(leetCodeStudy.IsPalindrome(435345));
+
+Console.WriteLine(leetCodeStudy.RomanToInt("LVIII"));
+Console.WriteLine(leetCodeStudy.RomanToInt("MCMXCIV"));

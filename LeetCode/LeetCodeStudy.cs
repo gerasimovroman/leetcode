@@ -96,4 +96,46 @@ public class LeetCodeStudy
 
         return x - r == 0;
     }
+    
+    
+    public int RomanToInt(string s) {
+        s = s.ToLower();
+
+        var dic = new Dictionary<char, int>()
+        {
+            { 'i', 1 },
+            { 'v', 5 },
+            { 'x', 10 },
+            { 'l', 50 },
+            { 'c', 100 },
+            { 'd', 500 },
+            { 'm', 1000 }
+        };
+
+        var r = 0;
+        var i = s.Length - 1;
+
+        var prev = 0;
+        
+        while (i >= 0)
+        {
+            var ch = s[i];
+            var v = dic[ch];
+
+            if (prev > v)
+            {
+                r -= v;
+            }
+            else
+            {
+                r += dic[ch];
+            }
+
+            prev = v;
+            
+            i--;
+        }
+
+        return r;
+    }
 }
