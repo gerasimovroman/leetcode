@@ -11,5 +11,11 @@ var leetCodeStudy = new LeetCodeStudy();
 // Console.WriteLine(leetCodeStudy.IsPalindrome(121));
 // Console.WriteLine(leetCodeStudy.IsPalindrome(435345));
 
-Console.WriteLine(leetCodeStudy.RomanToInt("LVIII"));
-Console.WriteLine(leetCodeStudy.RomanToInt("MCMXCIV"));
+
+// Console.WriteLine(leetCodeStudy.RomanToInt("LVIII"));
+// Console.WriteLine(leetCodeStudy.RomanToInt("MCMXCIV"));
+
+
+Console.WriteLine(leetCodeStudy.LongestCommonPrefix(new []{"flower","flow","flight"}));
+Console.WriteLine(leetCodeStudy.LongestCommonPrefix(new []{"dog","racecar","car"}));
+Console.WriteLine(leetCodeStudy.LongestCommonPrefix(new []{"cir","car"}));

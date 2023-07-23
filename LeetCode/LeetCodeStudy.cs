@@ -97,7 +97,6 @@ public class LeetCodeStudy
         return x - r == 0;
     }
     
-    
     public int RomanToInt(string s) {
         s = s.ToLower();
 
@@ -137,5 +136,35 @@ public class LeetCodeStudy
         }
 
         return r;
+    }
+    
+    public string LongestCommonPrefix(string[] strs) {
+        Array.Sort(strs);
+
+        var longestPrefix = strs[0];
+        var startPos = 1;
+        var i = startPos;
+        
+        while(i < strs.Length)
+        {
+            if (strs[i].StartsWith(longestPrefix))
+            {
+                startPos = i;
+                i++;
+            }
+            else
+            {
+                if (longestPrefix.Length == 1)
+                {
+                    longestPrefix = "";
+                    break;
+                }
+                
+                longestPrefix = longestPrefix.Substring(0, longestPrefix.Length - 1);
+                i = startPos;
+            }
+        }
+
+        return longestPrefix;
     }
 }
