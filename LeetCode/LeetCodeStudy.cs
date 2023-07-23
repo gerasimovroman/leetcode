@@ -19,7 +19,7 @@ public class LeetCodeStudy
             }
         }
     }
-    
+
     public int RemoveElement(int[] nums, int val)
     {
         var j = 0;
@@ -34,29 +34,30 @@ public class LeetCodeStudy
         }
 
         return j;
-    } 
-    
-    
+    }
+
+
     public int RemoveDuplicates(int[] nums)
     {
         var j = 0;
-        
+
         for (var i = 0; i < nums.Length; i++)
         {
             if (nums[i] != nums[j])
             {
                 nums[j + 1] = nums[i];
                 j++;
-            }    
+            }
         }
 
         return j + 1;
     }
-    
-    
-    public int RemoveDuplicates2(int[] nums) {
+
+
+    public int RemoveDuplicates2(int[] nums)
+    {
         var j = 0;
-        
+
         for (var i = 0; i < nums.Length; i++)
         {
             if (nums[i] != nums[j])
@@ -72,13 +73,12 @@ public class LeetCodeStudy
                     nums[j + 1] = nums[i];
                     j++;
                 }
-                
             }
         }
 
         return j + 1;
     }
-    
+
     public bool IsPalindrome(int x)
     {
         if (x < 0) return false;
@@ -96,8 +96,9 @@ public class LeetCodeStudy
 
         return x - r == 0;
     }
-    
-    public int RomanToInt(string s) {
+
+    public int RomanToInt(string s)
+    {
         s = s.ToLower();
 
         var dic = new Dictionary<char, int>()
@@ -115,7 +116,7 @@ public class LeetCodeStudy
         var i = s.Length - 1;
 
         var prev = 0;
-        
+
         while (i >= 0)
         {
             var ch = s[i];
@@ -131,21 +132,22 @@ public class LeetCodeStudy
             }
 
             prev = v;
-            
+
             i--;
         }
 
         return r;
     }
-    
-    public string LongestCommonPrefix(string[] strs) {
+
+    public string LongestCommonPrefix(string[] strs)
+    {
         Array.Sort(strs);
 
         var longestPrefix = strs[0];
         var startPos = 1;
         var i = startPos;
-        
-        while(i < strs.Length)
+
+        while (i < strs.Length)
         {
             if (strs[i].StartsWith(longestPrefix))
             {
@@ -159,12 +161,33 @@ public class LeetCodeStudy
                     longestPrefix = "";
                     break;
                 }
-                
+
                 longestPrefix = longestPrefix.Substring(0, longestPrefix.Length - 1);
                 i = startPos;
             }
         }
 
         return longestPrefix;
+    }
+
+    public ListNode MergeTwoLists(ListNode list1, ListNode list2)
+    {
+        if (list1 != null && list2 != null)
+        {
+            if (list1.val < list2.val)
+            {
+                list1.next = MergeTwoLists(list1.next, list2);
+                return list1;
+            }
+            else
+            {
+                list2.next = MergeTwoLists(list1, list2.next);
+                return list2;
+            }
+        }
+
+        if (list1 != null) return list1;
+        
+        return list2;
     }
 }

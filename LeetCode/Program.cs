@@ -1,8 +1,8 @@
 ﻿using LeetCode;
+
 var leetCodeStudy = new LeetCodeStudy();
 // Console.WriteLine(leetCodeStudy.RemoveDuplicates2(new []{1,1,1,2,2,3}));
 // Console.WriteLine(leetCodeStudy.RemoveDuplicates2(new []{0,0,1,1,1,1,2,3,3}));
-
 
 
 // Console.WriteLine(Math.DivRem(121, 10, out var rem));
@@ -16,6 +16,12 @@ var leetCodeStudy = new LeetCodeStudy();
 // Console.WriteLine(leetCodeStudy.RomanToInt("MCMXCIV"));
 
 
-Console.WriteLine(leetCodeStudy.LongestCommonPrefix(new []{"flower","flow","flight"}));
-Console.WriteLine(leetCodeStudy.LongestCommonPrefix(new []{"dog","racecar","car"}));
-Console.WriteLine(leetCodeStudy.LongestCommonPrefix(new []{"cir","car"}));
+// Console.WriteLine(leetCodeStudy.LongestCommonPrefix(new []{"flower","flow","flight"}));
+// Console.WriteLine(leetCodeStudy.LongestCommonPrefix(new []{"dog","racecar","car"}));
+// Console.WriteLine(leetCodeStudy.LongestCommonPrefix(new []{"cir","car"}));
+
+// ListNodeHelper.WriteLine(leetCodeStudy.MergeTwoLists(new ListNode(1, new ListNode(2, new ListNode(4))),
+//     new ListNode(1, new ListNode(3, new ListNode(4)))));
+// ListNodeHelper.WriteLine(leetCodeStudy.MergeTwoLists(new ListNode(5), new ListNode(1, new ListNode(2, new ListNode(4)))));
+ListNodeHelper.WriteLine(leetCodeStudy.MergeTwoLists(ListNodeHelper.FromArray(new[] { -8, -5, -4, 1, 8, 8 }),
+    ListNodeHelper.FromArray(new[] { -8, -6, 1, 2, 7, 9 })));
